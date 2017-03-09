@@ -24,6 +24,7 @@
 #define AXIS_TRIGGER_LEFT 5
 #define AXIS_TRIGGER_RIGHT 6
 
+//im not sure what this does :( but they're global functions
 inline double dabs(double d) { return d > 0.0 ? d : -d; } // Absolute value of a double precision floating point number
 inline bool IsReasonable(double axisVal) { return dabs(axisVal) > 0.2; } // Ensures the axis is intentionally engaged
 inline float square(double num) { return num * num; } //Return the square of the the given number
@@ -52,6 +53,8 @@ public:
     void AutonomousPeriodic();
     void TeleopInit();
     void TeleopPeriodic();
+    void TestInit();
+    void TestPeriodic();
     
     void SetDriveMotors(float left, float right);
     void ArcadeDrive(float moveValue, float rotateValue, bool squaredInputs);
